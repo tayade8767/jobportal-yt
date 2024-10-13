@@ -16,12 +16,19 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-const corsOptions = {
-    origin: 'https://jobportal-yt-frontend.onrender.com',
-    credentials:true
-}
+// const corsOptions = {
+//     origin: 'https://jobportal-yt-frontend.onrender.com',
+//     credentials:true
+// }
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://jobportal-yt-frontend.onrender.com', // Allow your frontend
+    credentials: true
+}));
+
 
 const PORT = process.env.PORT || 8000;
 
