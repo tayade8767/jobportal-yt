@@ -9,4 +9,13 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+   server: {
+    cors: true, // This enables CORS for all origins
+    // Alternatively, you can be more specific:
+    // cors: {
+    //   origin: true, // Allow any origin
+    //   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    //   credentials: true,
+    // }
+  },
 })
