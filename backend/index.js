@@ -23,7 +23,7 @@ app.use(cookieParser());
 
 // app.use(cors(corsOptions));
 
-const cors = require('cors');
+// const cors = require('cors');
 app.use(cors({
     origin: 'https://jobportal-yt-frontend.onrender.com', // Allow your frontend
     credentials: true
