@@ -11,11 +11,11 @@ export default defineConfig({
   },
    server: {
     cors: true, // This enables CORS for all origins
-    // Alternatively, you can be more specific:
-    // cors: {
-    //   origin: true, // Allow any origin
-    //   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-    //   credentials: true,
-    // }
+     // Alternatively, you can be more specific:
+     cors: {
+        origin: true, // Allow any origin
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+        credentials: true,
+      }
   },
 })
